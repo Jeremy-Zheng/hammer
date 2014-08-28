@@ -1,0 +1,92 @@
+/**
+ * Created by Administrator on 2014/8/22.
+ */
+class Hello_world extends egret.DisplayObjectContainer {
+
+    private load_text;
+    private person;
+    private test;
+
+
+    public constructor() {
+        super();
+        this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+    }
+
+    //一切就绪之后就开始运行这个函数
+    private onAddToStage(event:egret.Event) {
+
+        //初始化加载时的文字
+        this.init_laod_text();
+
+        //配置加载文件
+        RES.loadConfig("resource/resource.json", "resource/");
+
+        //监听资源加载完后触发事件
+        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComp, this);
+
+        //监听资源加载过程中出发的事件
+        RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
+
+        //开始加载资源
+        RES.loadGroup("preload");
+    }
+
+    //资源加载过程中执行的函数
+    private onResourceProgress(event) {
+        if (event.groupName == "preload") {
+            this.load_text.text = "游戏加载中..." + event.itemsLoaded + "/" + event.itemsTotal;
+        }
+    }
+
+    //资源加载完成后执行的函数
+    private onGroupComp() {
+
+        //移除加载文本......
+        this.removeChildAt(0);
+        this.load_text = null;
+
+        this.init_hammer_animation();
+        this.init_person_animation()
+    }
+
+
+    //初始化person动画对象
+    private init_person_animation() {
+        var data = RES.getRes("person_json");//获取动画文件的信息配置文件
+        var texture = RES.getRes("person_png");//获取动画文件的图片
+        this.person = new egret.MovieClip(data, texture);//创建MovieClip
+        this.addChild(this.person);//添加到显示列表，显示影片剪辑
+        this.person.frameRate = 10;//设置动画的帧频
+
+        this.person.y=200;
+        this.person.gotoAndPlay("cao");//跳转到指定帧并开始播放
+
+    }
+
+
+    //初始化hammer动画对象
+    private init_hammer_animation() {
+        alert(123);
+        var data = RES.getRes("hammer_json");//获取动画文件的信息配置文件
+        var texture = RES.getRes("hammer_p");//获取动画文件的图片
+        this.test = new egret.MovieClip(data, texture);//创建MovieClip
+        this.addChild(this.test);//添加到显示列表，显示影片剪辑
+        this.test.frameRate = 10;//设置动画的帧频
+
+        this.test.gotoAndPlay("cao");//跳转到指定帧并开始播放
+    }
+
+    //初始化加载文字
+    private init_laod_text() {
+        this.load_text = new egret.TextField();
+        this.addChild(this.load_text);
+        this.load_text.y = 300;
+        this.load_text.width = 480;
+        this.load_text.height = 100;
+        this.load_text.textColor = "#000000";
+        this.load_text.textAlign = "center";
+    }
+
+
+}

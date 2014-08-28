@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="ico.ico"/>
+        <div id='wx_pic' style='margin:0 auto;display:none;'>
+            <img src='share.jpg' />
+        </div>
+
+        <title>大锤锤捶小锤锤</title>
+
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+        <META HTTP-EQUIV="Expires" CONTENT="0">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1,
+        maximum-scale=1, user-scalable=no">
+
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="full-screen" content="true"/>
+        <meta name="screen-orientation" content="portrait"/>
+        <meta name="x5-fullscreen" content="true"/>
+        <meta name="360-fullscreen" content="true"/>
+        <base href="../"/>
+
+        <style>
+            body {
+                text-align: center;
+                background: #ffffff;
+                padding: 0;
+                border: 0;
+                margin: 0;
+                height: 100%;
+                font: normal 100% Helvetica, Arial, sans-serif;
+            }
+
+            html {
+                -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            }
+
+            .shelter {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                background: #000;
+                text-align: center;
+                color: #fff;
+                font-size: 1em;
+                line-height: 1.7em;
+                opacity: 0.9;
+            }
+
+            .shelter .tip {
+                padding-top: 78px;
+            }
+
+            .shelter .btn {
+                position: absolute;
+                display: block;
+                width: 200px;
+                left: 50%;
+                margin-left: -100px;
+                color: #fff;
+                line-height: 1.7em;
+                font-family: "微软雅黑", "黑体", "宋体", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                background-color: #000;
+                font-size: 1em;
+                border-radius: 5px;
+                padding: 6px 12px;
+                border: 1px solid #cfcfcf;
+                text-decoration: none;
+
+                transition: border, background 0.4s linear, color 0.15s linear;
+                -webkit-transition: border, background 0.4s linear, color 0.15s linear;
+                -moz-transform: border, background 0.4s linear, color 0.15s linear;
+                -o-transform: border, background 0.4s linear, color 0.15s linear;
+            }
+
+            .shelter .btn:active {
+                background: #ffffff;
+                color: #000000;
+            }
+
+            .shelter .arrow {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .shelter #attention_us {
+                bottom: 20%;
+            }
+
+            .shelter #start_btn {
+                bottom: 10%;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div style="display:inline-block;
+                    width:100%;
+                    height:100%;
+                    margin: 0 auto;
+                    position:relative;"
+             id="gameDiv">
+            <canvas id="gameCanvas" width="480" height="800">
+
+            </canvas>
+        </div>
+
+        <div id="shelter" class="shelter">
+            <div>
+
+                <p class="tip">
+                    基友(女)同志你好：你挥舞了你的大锤锤<span id="hit_account">100</span>下，<br/>
+                    你殴打小锤锤的样子十分的潇(dou)洒(bi)！<br/>
+                    快分享到朋友圈，让大家一起来爱(qun)抚(ou)小锤锤！
+                </p>
+
+                <p>
+                    点击右上角微信按钮 <br/>【分享到朋友圈】
+                </p>
+
+                <a href="javascript:void(0);" id="start_btn" class="btn">继续殴打</a>
+
+                <a href="http://mp.weixin.qq.com/s?__biz=MjM5NzU0MzU2MA==&mid=200904383&idx=1&sn=cc1250364d279986ce219a8fcda59c85#rd"
+                   class="btn" id="attention_us">关注我们</a>
+            </div>
+            <img class="arrow" src="arrow.png" alt="分享"/>
+        </div>
+
+        <script>var document_class = "Hello_world";</script>
+        <!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+        <script src="bin-debug/lib/egret_file_list.js"></script>
+        <script src="launcher/egret_require.js"></script>
+        <script src="launcher/egret_loader.js"></script>
+        <script src="bin-debug/src/game_file_list.js"></script>
+
+        <script>
+            egret_h5.preloadScript(egret_file_list, "libs/core/");
+            egret_h5.preloadScript(game_file_list, "bin-debug/src/");
+            egret_h5.startLoading();
+        </script>
+    </body>
+</html>

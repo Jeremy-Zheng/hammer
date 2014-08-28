@@ -1,0 +1,48 @@
+﻿{
+"res":{
+	"cry_00000": {"x":0,"y":0,"w":400,"h":500},
+	"cry_10000": {"x":400,"y":0,"w":400,"h":500},
+	"stand_00000": {"x":0,"y":500,"w":400,"h":500},
+	"stand_10000": {"x":400,"y":500,"w":400,"h":500},
+	"swell_00000": {"x":0,"y":1000,"w":400,"h":500},
+	"swell_10000": {"x":400,"y":1000,"w":400,"h":500}
+},
+"frames": {
+	"cry_0": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"cry_00000","x":0,"y":0}
+		]
+	},
+	"cry_1": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"cry_10000","x":0,"y":0}
+		]
+	},
+	"stand_0": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"stand_00000","x":0,"y":0}
+		]
+	},
+	"stand_1": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"stand_10000","x":0,"y":0}
+		]
+	},
+	"swell_0": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"swell_00000","x":0,"y":0}
+		]
+	},
+	"swell_1": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"swell_10000","x":0,"y":0}
+		]
+	}
+}
+}

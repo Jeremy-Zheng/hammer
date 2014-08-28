@@ -1,0 +1,14 @@
+{
+    "document_class": "Hello_world",
+    "modules": [
+        {
+            "name": "core"
+        }
+    ],
+    "native": {
+        "path_ignore": [
+            "libs"
+        ]
+    },
+    "egret_version":"1.0.4"
+}

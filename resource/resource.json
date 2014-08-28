@@ -1,0 +1,19 @@
+{
+"resources":
+	[
+		{"name":"bg","type":"image","url":"assets/bg.jpg"},
+		{"name":"egretIcon","type":"image","url":"assets/egret_icon.png"},
+        {"name":"description","type":"json","url":"config/description.json"},
+        {"name":"person_json","type":"json","url":"assets/person.json"},
+        {"name":"person_png","type":"image","url":"assets/person.png"},
+        {"name":"hammer_json","type":"json","url":"assets/hammer.json"},
+        {"name":"hammer_png","type":"image","url":"assets/hammer.png"}
+	],
+
+"groups":
+	[
+        {"name":"preload",
+            "keys":
+            "bg,egretIcon,person_json,person_png,hammer_json,hammer_png"}
+	]
+}

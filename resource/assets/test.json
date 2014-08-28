@@ -1,0 +1,15 @@
+﻿{
+"res":{
+	"stand0000": {"x":0,"y":0,"w":103,"h":76},
+	"stand0001": {"x":0,"y":76,"w":103,"h":76}
+},
+"frames": {
+	"stand": {
+		"totalFrame": 2,
+		"childrenFrame": [
+			{"res":"stand0000","x":0,"y":0,"action":"stand_0"},
+			{"res":"stand0001","x":0,"y":0,"action":"stand_1"}
+		]
+	}
+}
+}
